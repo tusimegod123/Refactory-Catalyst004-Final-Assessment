@@ -8,7 +8,6 @@ registerValid = () => {
    var residence = document.forms["registerForm"]["residence"];
    var occupation = document.forms["registerForm"]["occupation"];
    var nationality = document.forms["registerForm"]["nationality"];
-   var gender = document.forms["registerForm"]["gender"];
    var category = document.forms["registerForm"]["category"];
 
 
@@ -19,10 +18,8 @@ registerValid = () => {
             if (Reside(residence)) {
                if (Job(occupation)) {
                   if (Origin(nationality)) {
-                     if (Gender(gender)) {
-                        if (Group(category)) {
-                           return true
-                        }
+                     if (Group(gender)) {
+                        return true
                      }
                   }
                }

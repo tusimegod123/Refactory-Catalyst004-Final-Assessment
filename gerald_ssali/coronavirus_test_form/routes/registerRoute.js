@@ -23,5 +23,16 @@ router.post('/patients', async (req, res) => {
    }
 })
 
+// all registered patients
+router.get('/allpatients', async (req, res) => {
+   try {
+      const patients = await Patient.find()
+      res.render('patientList', { allpatients: patients })
+   } catch (error) {
+      console.log(error)
+      res.status(400, 'unable to find patients')
+   }
+})
+
 // export for external use
 module.exports = router;
