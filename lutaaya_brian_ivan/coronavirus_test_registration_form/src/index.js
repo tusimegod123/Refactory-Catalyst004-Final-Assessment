@@ -1,12 +1,18 @@
 // import all the dependencies
 const path = require('path');
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const routes = require('./routes');
 
 // Declare the constants
 const PORT = 5000;
+const DB_URI = 'mongodb://localhost:27017/coronavirus';
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+};
 
 // Initialize the application
 const app = express();
@@ -24,6 +30,11 @@ app.set('views', path.join(__dirname, '/views'));
 
 // The endpoints
 app.use('/', routes);
+
+mongoose.connect(DB_URI, options, (error) => {
+  if (error) throw error;
+  console.log(`The Database is running ...`);
+});
 
 app.listen(PORT, () => {
   console.log(`The server is listening on PORT ${PORT}`);
