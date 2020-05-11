@@ -17,7 +17,7 @@ function formValidation(){
      if(occupationCheck(occupation)){
       if(nationalityCheck(nationality))
       if(categoryCheck(category)){
-       return true
+        return true
       }
      }
     }
@@ -70,36 +70,19 @@ function ageCheck(input){
   //instantiating an object
   let ageObject = new ageCheckCalculator(input.value);
   let age = ageObject.calculateAge();
-if(input.value == "" || age > 1){
-document.getElementById('para10').innerHTML = `${age}`
+if(age < 1 || age > 150 || input.value == ''){
+document.getElementById('para10').innerHTML = `Select Date Of Birth`
 input.style.border='2px solid red'
 input.focus();
 return false;
 }
 else
 {
-  document.getElementById('para10').innerHTML = `${age}`
+  document.getElementById('para10').innerHTML = ``
   input.style.border='2px solid green'
 return true;
 }
 }
-// function ageCheck(input){
-//  //instantiating an object
-//  var ageObject = new ageCheckF(input)
-//  let age = ageObject.calculateAge();
-//   let dobId = document.getElementById('dateofbirth');
-//   if(dobId !== ''){
-//    dobId.style.border='2px solid green'
-//    document.getElementById('para10').innerHTML =''
-//    return true
-//   }else{
-//    document.getElementById('para10').innerHTML = 'Select Date Of Birth'
-//    dobId.style.border='2px solid red'
-//    dobId.getElementById('dateofbirth').focus()
-//    return false
-//    }
-// }
-
 
 function residenceCheck(input){
  var letters = /^[A-Za-z]+$/;
@@ -162,3 +145,4 @@ else
 return true;
 }
 }
+

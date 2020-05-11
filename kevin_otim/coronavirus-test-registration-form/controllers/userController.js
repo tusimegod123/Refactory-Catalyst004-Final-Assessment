@@ -15,7 +15,9 @@ exports.post_form = async(req,res)=>{
  let newPatient = await Patient(req.body);
  newPatient.save((err,patient)=>{
   if(err) return res.status(500).send({message:'server error'})
-   if(patient) return res.status(200).redirect('back')
+   if(patient){
+   req.flash("success", "Registration was successfull!");
+   res.render("index", { successes: req.flash("success") });}
  })
  }catch(err){
   console.log(err)

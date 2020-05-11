@@ -11,7 +11,13 @@ html
          h5 Ministry of health
          h3(style='font-wieght:bold') COVID-19(CORONA VIRUS)
          h5 Virus-Test Registration Form
-        form(action="/wtf/", method="post", autocomplete='off',name= 'myform', onsubmit = 'return formValidation();')
+          if successes
+           for success in successes
+            div.alert.alert-success #{ success }
+             div#messageContainer
+              button.close(type='button', data-dismiss='alert', aria-label='Close')
+               span(aria-hidden='true') × 
+        form(action="/index/", method="post", autocomplete='off',name= 'myform', onsubmit = 'return formValidation();')
          .form-row
           .form-group.col-md-6
            label(for='surname') Surname
@@ -62,8 +68,7 @@ html
            p.text-danger#para7.small
          .form-row
           .form-group.ml-auto
-           input.btn.btn-primary(type="submit", value="Register", style='width:200px')
-
+           input.btn.btn-primary(type="submit", value="Register", style='width:200px')       
 
     script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous")
     script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous")
