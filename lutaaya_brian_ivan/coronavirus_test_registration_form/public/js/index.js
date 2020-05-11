@@ -1,7 +1,5 @@
-console.log('Hooray');
-
+// The validate function for the form
 const validate = () => {
-  event.preventDefault();
   const surname = document.getElementById('surname');
   const givenname = document.getElementById('givenname');
   const dateOfBirth = document.getElementById('dateOfBirth');
@@ -17,14 +15,15 @@ const validate = () => {
         if (validateResidence(residence)) {
           if (validateOccupation(occupation)) {
             if (validateNationality(nationality)) {
-              validateCategory(category);
+              if (validateCategory(category)) {
+                return true;
+              }
             }
           }
         }
       }
     }
   }
-  // return false;
 };
 
 // Validate the surname
@@ -193,5 +192,11 @@ const validateCategory = (category) => {
 
 const form = document.getElementById('myform');
 form.addEventListener('submit', (event) => {
-  validate();
+  // event.preventDefault();
+  if (validate()) {
+    console.log('successful validation');
+  } else {
+    console.log('error validating');
+    event.preventDefault();
+  }
 });

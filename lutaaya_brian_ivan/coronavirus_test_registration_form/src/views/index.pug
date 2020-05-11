@@ -13,9 +13,8 @@ html(lang="en")
                         h6 Virus-Test Registration Form
             .row#project
                 .col
-                    .alert.alert-success.alert-dismissible.fade.show(role="alert")
-                        - var by = JSON.stringify(response)
-                          if response.type == "success"
+                    if response.type === "success"
+                        .alert.alert-success.alert-dismissible.fade.show(role="alert")
                             strong #{response.message}
                             .close(type="button" ,data-dismiss="alert" , aria-label="Close")
                                 span(aria-hidden="true") &times;
