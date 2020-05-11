@@ -1,4 +1,6 @@
-const formSubmitted = event => {
+
+const myform = document.getElementById("patientForm");
+function formSubmitted (event){
     event.preventDefault();
 
     //validate surname and given name
@@ -106,8 +108,10 @@ const formSubmitted = event => {
         categoryError.innerHTML = "";
     }
     alert('Form Succesfully Submitted');
-    return true;
+  window.location.reload()
+  return true;
 
 }
+
 
 patientForm.addEventListener("submit", formSubmitted);

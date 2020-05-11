@@ -5,6 +5,7 @@ const Patient = require('../models/patientModel')
 
 //patient input request route
 router.get('/form', (req, res) => {
+    //res.render('form')
     res.sendFile(path.join(__dirname, '../views', 'form.html'));
 })
 
