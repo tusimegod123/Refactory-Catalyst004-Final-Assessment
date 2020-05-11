@@ -24,6 +24,7 @@ const validate = () => {
       }
     }
   }
+  return false;
 };
 
 // Validate the surname
@@ -190,6 +191,13 @@ const validateCategory = (category) => {
   }
 };
 
+const invalidateInputs = () => {
+  const inputs = document.getElementsByTagName('input');
+  inputs.forEach((input) => {
+    input.style.border = '1px solid red';
+  });
+};
+
 const form = document.getElementById('myform');
 form.addEventListener('submit', (event) => {
   // event.preventDefault();
@@ -197,6 +205,7 @@ form.addEventListener('submit', (event) => {
     console.log('successful validation');
   } else {
     console.log('error validating');
+    // invalidateInputs();
     event.preventDefault();
   }
 });

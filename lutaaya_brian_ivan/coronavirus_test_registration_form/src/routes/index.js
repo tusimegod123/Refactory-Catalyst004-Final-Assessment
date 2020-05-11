@@ -14,7 +14,6 @@ routes.get('/', (req, res) => {
 // a POST route at '/'
 routes.post('/', async (req, res) => {
   try {
-    console.log(req.body);
     const patient = new Patient(req.body);
     await patient.save();
 
