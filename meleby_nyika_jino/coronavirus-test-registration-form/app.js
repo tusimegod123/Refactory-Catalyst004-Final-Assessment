@@ -1,16 +1,21 @@
 const express = require('express')
 const mongoose = require('mongoose')
 var bodyParser = require('body-parser')
-const formRoutes = require('./routes/formRoutes')
-//const path = require('path')
+const patients = require('./routes/patients')
 const server = express()
+
+//Middleware to manage static files
 server.use(express.static('public'))
+
+//Middleware to set the default view engine
 server.set('view engine','pug')   
 
-//http parsing middleware
+//Http parsing middleware
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
-server.use('/', formRoutes)
+
+//Routing middleware
+server.use('/', patients)
 
 //connect to the database
 mongoose.connect('mongodb://localhost:27017/covid19', { useNewUrlParser: true, useUnifiedTopology: true }, function(err) {

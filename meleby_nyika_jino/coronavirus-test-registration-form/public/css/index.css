@@ -1,7 +1,11 @@
 body{
     max-width: 700px;
     margin: auto;
-    
+    height: 400px;
+    margin-top: 5px;    
+}
+img{
+    height: 70px;
 }
 label{
     font-weight: 500;
@@ -10,6 +14,10 @@ label{
 .card-title{
     margin-bottom: 0;
 }
+select{
+    text-align-last:center; 
+}
+
 .card-body{
     padding: 1.8rem;
     padding-top: 0px;
@@ -19,7 +27,7 @@ label{
 form{
     margin-top: 15px;
 }
-h5,h3{
+h4,h6{
     text-align: center;
     margin-bottom: 0;
 }
