@@ -2,7 +2,8 @@
 const express = require('express');
 const userRoutes = require('./routes/userRoutes');
 const bodyParser = require('body-parser');
-/* const mongoose = require('mongoose');
+const mongoose = require('mongoose');
+/* 
 
 const passport = require('passport');
 const passportJWT = require('passport-jwt');
@@ -42,12 +43,12 @@ if (port == null || port == "") {
 
 
 
-/* let db = process.env.MONGODB_URL;
+let db = process.env.MONGODB_URL;
 if (db == null || db == "") {
-    db = 'mongodb+srv://tuadek_user:rdVBTJkkw3mbEeb3@cluster0-nsw9t.mongodb.net/test';
-} */
+    db = 'mongodb://localhost:27017/covid';
+}
 
-/* const connectDB = async () => {
+const connectDB = async () => {
   try {
     await mongoose.connect(db, {
       useUnifiedTopology: true,
@@ -59,7 +60,7 @@ if (db == null || db == "") {
     process.exit(1);
   }
 };
-connectDB(); */
+connectDB();
 
 
 //Serve the apllication

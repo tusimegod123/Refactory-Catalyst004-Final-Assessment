@@ -23,72 +23,73 @@
             <h4>Virus - Test Registration Form</h4>
             <div class="alert alert-success">' . $message . '</div>
 
-            <form action="">
+            <form action="/" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6 text-left">
                         <label for="inputSurname">Surname</label>
-                        <input type="text" class="form-control" id="inputFName" name="inputFName">
+                        <input type="text" class="form-control" id="inputSurname" name="surname">
                         <div class="error" id="fNameErr"></div>
                     </div>
                     <div class="form-group col-md-6 text-left">
-                        <label for="inputLName" >Given name</label>
-                        <input type="text" class="form-control" id="inputLName" name="inputLName">
+                        <label for="inputGivenNAme">Given name</label>
+                        <input type="text" class="form-control" id="inputGivenNAme" name="givenName">
                         <div class="error" id="lNameErr"></div>
                     </div>
                     <div class="form-group col-md-6 text-left">
-                        <label for="inputFName">Date of birth</label>
-                        <input type="text" class="form-control" id="inputFName" name="inputFName">
-                        <div class="error" id="fNameErr"></div>
+                        <label for="inputDOB">Date of Birth</label>
+                        <input type="date" class="form-control" id="inputDOB" name="DOB">
+                        <div class="error" id="refDOBErr"></div>
                     </div>
                     <div class="form-group col-md-6 text-left">
                         <label for="inputLName">Place of residence</label>
-                        <input type="text" class="form-control" id="inputLName" name="inputLName">
+                        <input type="text" class="form-control" id="inputResidence" name="residence">
                         <div class="error" id="lNameErr"></div>
                     </div>
                     <div class="form-group col-md-6 text-left">
-                        <label for="inputFName">Occupation</label>
-                        <input type="text" class="form-control" id="inputFName" name="inputFName">
+                        <label for="inputOccupation">Occupation</label>
+                        <input type="text" class="form-control" id="inputOccupation" name="occupation">
                         <div class="error" id="fNameErr"></div>
                     </div>
                     <div class="form-group col-md-6 text-left">
-                        <label for="inputLName">Nationality</label>
-                        <input type="text" class="form-control" id="inputLName" name="inputLName">
+                        <label for="inputNationality">Nationality</label>
+                        <input type="text" class="form-control" id="inputNationality" name="nationality">
                         <div class="error" id="lNameErr"></div>
                     </div>
                     <div class="form-group col-md-12 text-left mb-0">
                         <label for=""> Gender</label>
                         <hr>
-                        
                     </div>
-                    
+
                     <div class="form-group col-md-12 text-left">
-                        
-                        
                         <div class="form-check custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                            <input type="radio" value="Male" id="customRadioInline1" name="gender"
                                 class="custom-control-input" checked>
                             <label class="custom-control-label" for="customRadioInline1">Male</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                            <input type="radio" value="Female" id="customRadioInline2" name="gender"
                                 class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline2">Female</label>
                         </div>
 
                     </div>
-                   
 
-                    
+
+
 
                     <div class="form-group col-md-12 text-left">
-                        <label for=""> Category</label>
-                        <select class="form-control" id="cars">
+                        <label for="inputCategory"> Category</label>
+                        <select class="form-control" name="category" id="inputCategory">
                             <option value="">Select Category</option>
-                            <option value="single">Returnee</option>
-                            <option value="married">Contact</option>
-                            <option value="divorced">Alert</option>
-                            <option value="widow">Volunteer</option>
+                            <option value="Returnee">Returnee</option>
+                            <option value="Contact">Contact</option>
+                            <option value="Alert">Alert</option>
+                            <option value="Volunteer">Volunteer</option>
                         </select>
+                    </div>
+
+                    <div class="form-group col-md-12 text-left">
+                        <input type="submit" value="Register">
                     </div>
             </form>
         </div>
