@@ -32,8 +32,18 @@
     background-color: rgb(55, 194, 74);
     padding-left: 10px;
     display: block;
+    margin-left: 60px;
 }
-
+#body-div {
+    border: solid 2px lightgray;
+    width: 705px
+}
+img {
+    width: 700px;
+}
+h3 {
+    font-weight: bolder;
+}
 .red-asterisk {
     color: red;
     margin-left: 3px;

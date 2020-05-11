@@ -51,5 +51,6 @@ router.post("/logout", (req, res) => {
 
 // HTML FILE BUILD & TEST ENDPOINT
 router.get("/test", (req, res) => {res.sendFile(path.join(__dirname, '../views/html_files', 'patientRegistration.html'));});
+router.get("/test2", (req, res) => {res.sendFile(path.join(__dirname, '../views/html_files', 'successfulRegistration.html'));});
 
 module.exports = router;
