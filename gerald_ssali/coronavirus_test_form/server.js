@@ -1,5 +1,7 @@
 const express = require('express')
 const server = express()
+const path = require('path')
+server.use('/static', express.static(path.join(__dirname, 'public')))
 
 // database connection
 const mongoose = require('mongoose')
