@@ -32,7 +32,7 @@ router.post("/", async (req, res) => {
     } catch (error) {
         console.log(error);
 
-        res.status(400).send("unable to save to database");
+        res.status(400).sendFile(path.join(__dirname, '../views', 'error.html'));
     }
 });
 
