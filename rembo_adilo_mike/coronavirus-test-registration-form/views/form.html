@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <form action="/addpatient" method="POST" id="myForm" name="validform">
+                <form action="/addpatient" method="POST" id="patientForm" name="validform">
                     <div class="form-group">
                       <div class="form-row">
                         <div class="col-md-6">
@@ -60,7 +60,7 @@
                           <div class="col-md-6">
                               <label for="nationality">Nationality</label>
                               <input class="form-control" type="text" id="nationality" name="nationality" style="border-radius: 5px;">
-                              <small><p id="email-error"></p></small>
+                              <small><p id="nationalityError"></p></small>
                           </div>
                         </div>
                     </div>
@@ -80,10 +80,10 @@
                     </div>              
                     <div class="form-group">
                         <select class="custom-select mr-sm-2" id="category" name="category">
-                            <option selected>-- Select Category --</option>
+                            <option selected value="default">-- Select Category --</option>
                             <option value="Returnee">Returnee</option>
                             <option value="Contact">Contact</option>
-                            <option value="Alert">Alert/option>
+                            <option value="Alert">Alert</option>
                             <option value="Volunteer">Volunteer</option>
                         </select>
                         <small><p id="categoryError"></p></small>
@@ -95,5 +95,6 @@
             </div>
         </div>
     </div>
+    <script src="js/validator.js"></script>
 </body>
 </html>
