@@ -2,8 +2,12 @@
 senkatuuka_ashe_eric/coronavirus-test-registration-form/node_modules
 
 # Assets Directory
+assets
 senkatuuka_ashe_eric/coronavirus-test-registration-form/assets
 senkatuuka_ashe_eric/coronavirus-test-registration-form/ashe
+
+#Project Specifications
+CATALYST004-FINAL-TECHNICAL-ASSESSMENT.pdf
 
 # Editors
 .vscode
