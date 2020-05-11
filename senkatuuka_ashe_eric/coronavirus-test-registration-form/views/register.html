@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="./error.css">
 
     <title>COVID-19 (CORONA VIRUS)</title>
 </head>
@@ -22,8 +23,9 @@
             <h2>COVID-19 (CORONA VIRUS)</h2>
             <h4>Virus - Test Registration Form</h4>
             <div class="alert alert-success" id=`${message}`>#{message}</div>
+            <div class="alert alert-success" id='demo'>#{message}</div>
 
-            <form action="/" method="POST">
+            <form  name="formRegister" action="/" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6 text-left">
                         <label for="inputSurname">Surname</label>
@@ -32,28 +34,28 @@
                     </div>
                     <div class="form-group col-md-6 text-left">
                         <label for="inputGivenNAme">Given name</label>
-                        <input type="text" class="form-control" id="inputGivenNAme" name="givenName">
+                        <input type="text" class="form-control" id="inputGivenName" name="givenName">
                         <div class="error" id="lNameErr"></div>
                     </div>
                     <div class="form-group col-md-6 text-left">
                         <label for="inputDOB">Date of Birth</label>
                         <input type="date" class="form-control" id="inputDOB" name="DOB">
-                        <div class="error" id="refDOBErr"></div>
+                        <div class="error" id="dobErr"></div>
                     </div>
                     <div class="form-group col-md-6 text-left">
                         <label for="inputLName">Place of residence</label>
                         <input type="text" class="form-control" id="inputResidence" name="residence">
-                        <div class="error" id="lNameErr"></div>
+                        <div class="error" id="residenceErr"></div>
                     </div>
                     <div class="form-group col-md-6 text-left">
                         <label for="inputOccupation">Occupation</label>
                         <input type="text" class="form-control" id="inputOccupation" name="occupation">
-                        <div class="error" id="fNameErr"></div>
+                        <div class="error" id="occupationErr"></div>
                     </div>
                     <div class="form-group col-md-6 text-left">
                         <label for="inputNationality">Nationality</label>
                         <input type="text" class="form-control" id="inputNationality" name="nationality">
-                        <div class="error" id="lNameErr"></div>
+                        <div class="error" id="nationalityErr"></div>
                     </div>
                     <div class="form-group col-md-12 text-left mb-0">
                         <label for=""> Gender</label>
@@ -62,16 +64,15 @@
 
                     <div class="form-group col-md-12 text-left">
                         <div class="form-check custom-control custom-radio custom-control-inline">
-                            <input type="radio" value="Male" id="customRadioInline1" name="gender"
+                            <input type="radio" value="Male" id="inputMale" name="gender"
                                 class="custom-control-input" checked>
-                            <label class="custom-control-label" for="customRadioInline1">Male</label>
+                            <label class="custom-control-label" for="inputMale">Male</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" value="Female" id="customRadioInline2" name="gender"
+                            <input type="radio" value="Female" id="inputFemale" name="gender"
                                 class="custom-control-input">
-                            <label class="custom-control-label" for="customRadioInline2">Female</label>
+                            <label class="custom-control-label" for="inputFemale">Female</label>
                         </div>
-
                     </div>
 
 
@@ -86,7 +87,10 @@
                             <option value="Alert">Alert</option>
                             <option value="Volunteer">Volunteer</option>
                         </select>
+                        <div class="error" id="cactegoryErr"></div>
+                        
                     </div>
+
 
                     <div class="form-group col-md-12 text-left">
                         <input type="submit" value="Register">
@@ -106,6 +110,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+        <script src="./js/validation.js"></script>
 </body>
 
 </html>
