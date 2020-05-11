@@ -1,8 +1,9 @@
 # Dependency directory
-node_modules
+senkatuuka_ashe_eric/coronavirus-test-registration-form/assets
 
 # Assets Directory
-assets
+senkatuuka_ashe_eric/coronavirus-test-registration-form/assets
+#senkatuuka_ashe_eric/coronavirus-test-registration-form/
 
 # Editors
 .vscode
