@@ -3,11 +3,11 @@ function validate() {
   //Accessing form elements via form attribute
   var usurname = document.regpatient.surname;
   var ugivenname = document.regpatient.givenname;
-  var upor = document.loan.por;
-  var uocc = document.loan.occ;
-  var unation = document.loan.nation;
-  var umsex = document.loan.msex;
-  var ufsex = document.loan.fsex;
+  var upor = document.regpatient.por;
+  var uocc = document.regpatient.occ;
+  var unation = document.regpatient.nation;
+  var umsex = document.regpatient.male;
+  var ufsex = document.regpatient.female;
   //Validating different form elements from line 23 to 65
   if (surnamevalidation(usurname, 1, 16)) {
     if (givennamevalidation(ugivenname, 1, 16)) {
