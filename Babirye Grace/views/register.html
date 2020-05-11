@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RegistrationForm</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+  <div style="height: 30px;"></div>
+      <div class="address" style="width: 720px; height: 630px;">
+          <div id="3" class="container">
+            <img src="/images/header.png" alt="">
+            <p style="text-align: center;"><b>Ministry of Health</b></p>
+            <p style="text-align: center;"><b>COVID-19(CORONA VIRUS)</b></p>
+            <p style="text-align: center;"><b>Virus-Test Registration Form</b></p>
+          </div>
+          <div class="form">
+            <form name="form" class="form_div" action="/adduser" method="POST">
+              <div class="form-row" style="margin-left: 100px;">
+                <div class="col">
+                  Surname <br>
+                  <input type="text" name="surname" required>
+                  <p id="p1" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                </div>
+                <div class="col">
+                  Given name <br>
+                  <input type="text" name="givenname" required>
+                  <p id="p2" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                </div>
+              </div>
+              <div class="form-row" style="margin-left: 100px;">
+                <div class="col">
+                  Date of Birth <br>
+                  <input type="text" placeholder="YY/MM/DD" name="dateOfBirth" required>
+                  <p id="p3" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                </div>
+                <div class="col">
+                  Place of residence <br>
+                  <input type="text" name="placeOfResidence" required>
+                  <p id="p4" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                </div>
+              </div>
+              <div class="form-row" style="margin-left: 100px;">
+                <div class="col">
+                  Occupation <br>
+                  <input type="text" name="occupation" required>
+                  <p id="p5" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                </div>
+                <div class="col">
+                  Nationality <br>
+                  <input type="text" name="nationality" required>
+                  <p id="p6" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+                </div>
+              </div>
+              <div style="margin-left: 100px;">
+                Gender
+                <hr/>
+                <div class="form-row">
+                  <div class="col">
+                <input type="radio" value="option1" checked>Male
+                </div>
+                <div class="col">
+                <input type="radio" value="option2">Female
+                </div>
+                </div>
+              </div>
+              <div class="row" style="margin-left: 50px; padding-bottom: 15px; padding-top: 15px;"> 
+                Category<br>
+                <input list="browsers" placeholder="--select category--" name="category" style="width: 500px;">
+                  <datalist id="browsers">
+                    <option value="Returnee">
+                    <option value="Contact">
+                    <option value="Alert">
+                    <option value="Volunteer">
+                  </datalist>
+                <p id="p7" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+              </div>
+              <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                <button type="submit" class="button" onclick="validation()" style="color: white; margin-left: 40px;">Register</button>
+              </div>
+              </div>
+              <div class="row" style="padding-bottom: 15px;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div style="height: 30px;"></div>
+  <script src="/js/register.js"></script>
+  <script src="/js/bootstrap.js"></script>
+</body>
+</html>
