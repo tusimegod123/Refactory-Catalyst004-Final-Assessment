@@ -1,7 +1,65 @@
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        include components/head
+        title Coronavirus Test Registration Form
     body
-        h1 Coronavirus Test Registration Form
+        .container-fluid.no-gutters.px-0
+            .row.no-gutters
+                .col
+                    img.img-fluid(src="/static/assets/logo.png", alt="Uganda's Coat of Arms")
+                    .heading
+                        h6 Ministry of Health
+                        h3 COVID-19 (CORONA VIRUS)
+                        h6 Virus-Test Registration Form
+            .row
+                .col
+                    form(action="/", method="post")
+                        .form-row
+                            .form-group.col
+                                label(for="surname") Surname
+                                input.form-control#surname(type="text", name="surname")
+                                #surname_error
+                            .form-group.col
+                                label(for="givenname") Given Name
+                                input.form-control#givenname(type="text", name="givenname")
+                                #givenname_error
+                        .form-row
+                            .form-group.col
+                                label(for="dateOfBirth") Date of Birth
+                                input.form-control#dateOfBirth(type="date", name="dateOfBirth")
+                                #dateOfBirth_error
+                            .form-group.col
+                                label(for="residence") Residence
+                                input.form-control#residence(type="text", name="residence")
+                                #residence_error
+                        .form-row
+                            .form-group.col
+                                label(for="occupation") Occupation
+                                input.form-control#occupation(type="text", name="occupation")
+                                #occupation_error
+                            .form-group.col
+                                label(for="nationality") Nationality
+                                input.form-control#nationality(type="text", name="nationality")
+                                #nationality_error
+                        .form-row
+                            .form-group.col
+                                .form-check.form-check-inline
+                                    input.form-check-input#male(type="radio", name="gender", value="male")
+                                    label(for="male") Male
+                                .form-check.form-check-inline
+                                    input.form-check-input#female(type="radio", name="gender", value="female")
+                                    label(for="female") Female
+                        .form-row
+                            .form-group
+                                label(for="category") Category
+                                select.form-control#category(name="category")
+                                    option(value="none", selected) --Select Category--
+                                    option(value="Returnee") Returnee
+                                    option(value="Contact") Contact
+                                    option(value="Alert") Alert
+                                    option(value="Volunteer") Volunteer
+                                #catergory_error
+                        .form-row
+                            .form-group.col-md-6
+                                button.form-control(type="submit") Register
+    include components/foot

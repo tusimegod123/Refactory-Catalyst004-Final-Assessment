@@ -27,8 +27,8 @@ routes.post('/', async (req, res) => {
 });
 
 // Redirect users to '/' if a route is undefined
-routes.get('*', (req, res) => {
-  res.redirect('/');
-});
+// routes.get('*', (req, res) => {
+//   res.redirect('/');
+// });
 
 module.exports = routes;

@@ -31,6 +31,9 @@ app.set('views', path.join(__dirname, '/views'));
 // The endpoints
 app.use('/', routes);
 
+// Define route to access the static files
+app.use('/static', express.static(path.join(__dirname, './../public')));
+
 mongoose.connect(DB_URI, options, (error) => {
   if (error) throw error;
   console.log(`The Database is running ...`);
