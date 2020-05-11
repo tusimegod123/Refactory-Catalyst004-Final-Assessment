@@ -3,54 +3,60 @@ html(lang="en")
         include components/head
         title Coronavirus Test Registration Form
     body
-        .container-fluid.no-gutters.px-0
+        .container-fluid.px-0
             .row.no-gutters
                 .col
-                    img.img-fluid(src="/static/assets/logo.png", alt="Uganda's Coat of Arms")
+                    img.img-fluid#logo(src="/static/assets/logo.png", alt="Uganda's Coat of Arms")
                     .heading
                         h6 Ministry of Health
                         h3 COVID-19 (CORONA VIRUS)
                         h6 Virus-Test Registration Form
-            .row
+            .row#project
                 .col
-                    form(action="/", method="post")
+                    .alert.alert-success.alert-dismissible.fade.show(role="alert")
+                        - var by = JSON.stringify(response)
+                          if response.type == "success"
+                            strong #{response.message}
+                            .close(type="button" ,data-dismiss="alert" , aria-label="Close")
+                                span(aria-hidden="true") &times;
+                    form#myform(action="/", method="post")
                         .form-row
                             .form-group.col
                                 label(for="surname") Surname
-                                input.form-control#surname(type="text", name="surname")
+                                input.form-control#surname(type="text", name="surname", autocomplete="off")
                                 #surname_error
                             .form-group.col
                                 label(for="givenname") Given Name
-                                input.form-control#givenname(type="text", name="givenname")
+                                input.form-control#givenname(type="text", name="givenname", autocomplete="off")
                                 #givenname_error
                         .form-row
                             .form-group.col
                                 label(for="dateOfBirth") Date of Birth
-                                input.form-control#dateOfBirth(type="date", name="dateOfBirth")
+                                input.form-control#dateOfBirth(type="date", name="dateOfBirth", autocomplete="off")
                                 #dateOfBirth_error
                             .form-group.col
                                 label(for="residence") Residence
-                                input.form-control#residence(type="text", name="residence")
+                                input.form-control#residence(type="text", name="residence", autocomplete="off")
                                 #residence_error
                         .form-row
                             .form-group.col
                                 label(for="occupation") Occupation
-                                input.form-control#occupation(type="text", name="occupation")
+                                input.form-control#occupation(type="text", name="occupation", autocomplete="off")
                                 #occupation_error
                             .form-group.col
                                 label(for="nationality") Nationality
-                                input.form-control#nationality(type="text", name="nationality")
+                                input.form-control#nationality(type="text", name="nationality", autocomplete="off")
                                 #nationality_error
                         .form-row
                             .form-group.col
-                                .form-check.form-check-inline
+                                .form-check.form-check-inline.col-6
                                     input.form-check-input#male(type="radio", name="gender", value="male", checked)
                                     label(for="male") Male
                                 .form-check.form-check-inline
                                     input.form-check-input#female(type="radio", name="gender", value="female")
                                     label(for="female") Female
                         .form-row
-                            .form-group
+                            .form-group.col
                                 label(for="category") Category
                                 select.form-control#category(name="category")
                                     option(value="none", selected) --Select Category--
@@ -59,7 +65,6 @@ html(lang="en")
                                     option(value="Alert") Alert
                                     option(value="Volunteer") Volunteer
                                 #catergory_error
-                        .form-row
-                            .form-group.col-md-6
-                                button.form-control(type="submit" onClick="validate()") Register
+                        #button_container
+                            button.form-control#btn_submit(type="submit") Register
     include components/foot

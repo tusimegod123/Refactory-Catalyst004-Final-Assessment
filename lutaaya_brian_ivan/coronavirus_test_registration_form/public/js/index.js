@@ -24,6 +24,7 @@ const validate = () => {
       }
     }
   }
+  // return false;
 };
 
 // Validate the surname
@@ -189,3 +190,8 @@ const validateCategory = (category) => {
     return true;
   }
 };
+
+const form = document.getElementById('myform');
+form.addEventListener('submit', (event) => {
+  validate();
+});
