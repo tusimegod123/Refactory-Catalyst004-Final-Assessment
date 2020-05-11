@@ -1,9 +1,9 @@
-.login-text {
+/* .login-text {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-.heading-block {
+} */
+/* .heading-block {
     display: inline-block;
     color: #fff;
     background-color: purple;
@@ -18,7 +18,22 @@
     color: purple;
     margin-left: 10px;
     font-size: smaller;
+} */
+.success-message {
+    display: inline-block;
+    color: #fff;
+    background-color: rgb(55, 194, 74);
+    padding-left: 10px;
+    display: none;
 }
+.successful-message {
+    display: inline-block;
+    color: #fff;
+    background-color: rgb(55, 194, 74);
+    padding-left: 10px;
+    display: block;
+}
+
 .red-asterisk {
     color: red;
     margin-left: 3px;

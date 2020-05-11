@@ -7,12 +7,12 @@ const router = express.Router();
 router.get("/", (req, res) => {res.render('login');});
 
 // REGISTER STUDENT
-router.get("/addPatient", (req, res) => {res.render('registerPatient');});
+router.get("/addPatient", (req, res) => {res.render('patientRegistration');});
 router.post("/addPatient", async (req, res) => {
     try {
         var newPatient = new Patient(req.body);
         await newPatient.save();
-        res.render("registerPatient", {surname-error.style.display = "block"})
+        res.render("successfulRegistration")
         // const onePatient = {
         //     name:"",
         //     gender:"",
@@ -31,7 +31,8 @@ router.post("/addPatient", async (req, res) => {
         // x = newStudent.phoneNumber; oneStudent.phoneNumber = x;
         // x = newStudent.email; oneStudent.email = x;
         // res.render('profile', {student: oneStudent});
-    } catch {
+    } catch (error) {
+        console.log(error);
         res.send("Unable to save to Database");
     }
 });

@@ -1,3 +1,4 @@
 .env
 .gitignore
 stephen_kasirye/coronavirus-test-registration-form/node_modules
+stephen_kasirye/coronavirus-test-registration-form/views/html_files

@@ -11,29 +11,29 @@
 <body>
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <header>
+            <header style="width: 100%;">
                 <img src="/images/form-header-image.png" alt="" srcset="">
             </header>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" style="text-align: center;">
                     <h5>Ministry of Health</h5>
-                    <h3>COVID-19 (CORONA VIRUS)</h3>
+                    <h3><b>COVID-19 (CORONA VIRUS)</b></h3>
                     <h5>Virus - Test Registration Form</h5>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="success-block">Registration was successful !</h2>
+                    <h2 class="success-message">Registration was successful !</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-10 offset-md-1">
-                    <form name="registrationForm" action="/addPatient" method="POST">
+                    <form name="registrationForm" onsubmit="return formValidation();" action="/addPatient" method="POST">
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <label for="surname">Surname</label><span class="red-asterisk">*</span>
-                                <input type="text" class="form-control" name="surname">
-                                <div id="surname-error" class="error">This field is required</div>
+                                <label for="surName">Surname</label><span class="red-asterisk">*</span>
+                                <input type="text" class="form-control" name="surName">
+                                <div id="surName-error" class="error">This field is required</div>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="givenName">Given name</label><span class="red-asterisk">*</span>
