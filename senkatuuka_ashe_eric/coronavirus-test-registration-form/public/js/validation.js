@@ -1,7 +1,8 @@
 
+
 document.addEventListener('submit', function (event) {
-    var form = document.getElementById('formRegister');
-    document.getElementById("demo").innerHTML = "Hello World";
+    
+    
 
     var valid = {};                          // Object to store validation status of invidual fields
     var isFormValid;                         // Variable to store fvalidation status of entire form
@@ -70,7 +71,7 @@ document.addEventListener('submit', function (event) {
     if (!isFormValid) {
         event.preventDefault();
     } else {
-        alert('Validation Successful');
+        
     }
 
 });
@@ -218,7 +219,7 @@ function validateNationality(name, errID) {
 
 function validateCategory(name, errID) {
     let category = document.getElementById(name);
-    let valid = true;   
+    let valid = true;
     if (category.value === "") {
         printError(errID, "Select Patient Category");
         category.classList.add("invalid-outline");
@@ -246,127 +247,11 @@ function printError(elemId, hintMsg) {
 }
 
 
-/* function greet() {
 
-    var form = document.getElementById('userRegistration');
+document.addEventListener('click', function (event) {
+    var flashMessage = document.getElementById('message');
+    flashMessage.innerHTML = "";
+    flashMessage.classList.add("invisible");
 
+})
 
-    //METHOD TRIGGERERD BY THE SUBMIT EVENT
-    addEvent(form, 'submit', function (e) {
-
-        var valid = {};                          // Object to store validation status of invidual fields
-        var isFormValid;                         // Variable to store fvalidation status of entire form
-
-        // PERFORM INVIDUAL FIELDS VALIDATION
-        if (!validateName('inputName', 'nameErr')) {
-            valid.fname = false;
-        } else {
-            valid.fname = true;
-
-        }
-
-        if (!validateNationality('inputNIN', 'ninErr')) {
-            valid.nationality = false;
-        } else {
-            valid.nationality = true;
-        }
-
-        if (!validateTel('inputTel', 'telErr')) {
-            valid.tel1 = false;
-        } else {
-            valid.tel1 = true;
-        }
-
-        // CHECK VALID OBJECT FOR ANY INVALID FIELD
-        for (let field in valid) {
-            if (!valid[field]) {
-                isFormValid = false;
-                break;
-            }
-            isFormValid = true;
-        }
-
-        // If the form did not validate, prevent it being submitted
-        if (!isFormValid) {
-            e.preventDefault();
-        }
-
-    });
-
-    // VALIDATION METHODS
-    function validateName(name, errID) {
-        let fName = document.getElementById(name);
-        let valid = true;
-        if (fName.value === "") {
-            printError(errID, "Please enter customer name");
-            fName.classList.add("invalid-outline");
-            valid = false;
-        } else {
-            let regex = /^[a-zA-Z\s]+$/;
-            if (regex.test(fName.value) === false) {
-                printError(errID, "Please enter a valid name");
-                tel.classList.remove("valid-outline");
-                tel.classList.add("invalid-outline");
-                valid = false
-            } else {
-                printError(errID, "");
-                fName.classList.add("valid-outline");
-                valid = true;
-            }
-        }
-        return valid;
-    }
-
-    function validateNationality(paramNIN) {
-        let NIN = document.getElementById(paramNIN);
-        let valid = true;
-        if (NIN.value === "") {
-            printError("ninErr", "Please enter National ID Number");
-            NIN.classList.remove("valid-outline");
-            NIN.classList.add("invalid-outline");
-            valid = false;
-        } else {
-            let regex = /^[a-zA-Z\s]{3}[0-9]{10}$/;
-            if (regex.test(NIN.value) === false) {
-                printError("ninErr", "Please enter a valid NIN");
-                valid = false
-            } else {
-                printError("ninErr", "");
-                valid = true;
-            }
-        }
-        return valid;
-    }
-
-    function validateTel(paramtel, errID) {
-        let tel = document.getElementById(paramtel);
-        let valid = true;
-        if (tel.value === "") {
-            printError(errID, "Please enter telephone number");
-            tel.classList.remove("valid-outline");
-            tel.classList.add("invalid-outline");
-            valid = false;
-        } else {
-            let regex = /^[0-9]{10,}$/;
-            if (regex.test(tel.value) === false) {
-                printError(errID, "Please enter a valid telephone number");
-                tel.classList.remove("valid-outline");
-                tel.classList.add("invalid-outline");
-                valid = false
-            } else {
-                printError(errID, "");
-                tel.classList.remove("invalid-outline");
-                tel.classList.add("valid-outline");
-                valid = true;
-            }
-        }
-        return valid;
-    }
-
-    // Method to display error message
-    function printError(elemId, hintMsg) {
-        document.getElementById(elemId).innerHTML = hintMsg;
-    }
-}
-
-greet(); */
