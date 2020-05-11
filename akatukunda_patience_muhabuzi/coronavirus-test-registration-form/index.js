@@ -23,15 +23,15 @@ app.use("/", postRouter);
 
 //database connection
 mongoose.connect(
-    "mongodb://localhost:27017/covid_db",
-    { useNewUrlParser: true, useUnifiedTopology: true },
-    function(err) {
-        if (err) throw err;
-        console.log("Database connected");
-    }
+	"mongodb://localhost:27017/covid_db",
+	{ useNewUrlParser: true, useUnifiedTopology: true },
+	function(err) {
+		if (err) throw err;
+		console.log("Database connected");
+	}
 );
 
 // listening on port
 app.listen(8000, () => {
-    console.log("App listening on port 8000");
+	console.log("App listening on port 8000");
 });
