@@ -1,0 +1,26 @@
+body{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-height: 1000px;
+
+}
+.address{
+  border:1px solid grey;
+}
+.form{
+  padding-left; 15px
+}
+
+.col{
+  width: 1080px;
+}
+.button {
+  background-color: rgb(33, 102, 250); 
+  color: white;
+  text-align: center;
+  width: 200px;
+}
+.container{
+  padding: 1px;
+}
