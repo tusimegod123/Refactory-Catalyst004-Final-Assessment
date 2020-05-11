@@ -4,14 +4,11 @@
   "description": "A coronvirus test registration form for Uganda",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
-  "keywords": [
-    "Coronavirus",
-    "Uganda",
-    "Test",
-    "Patient-registration"
-  ],
+  "keywords": ["Coronavirus", "Uganda", "Test", "Patient-registration"],
   "author": "LUTAAYA Brian Ivan",
   "license": "MIT",
   "dependencies": {
