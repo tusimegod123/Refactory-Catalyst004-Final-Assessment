@@ -13,8 +13,9 @@ routes.get('/', (req, res) => {
 // a POST route at '/'
 routes.post('/', async (req, res) => {
   try {
+    console.log(req.body);
     const patient = new Patient(req.body);
-    await customer.save();
+    await patient.save();
 
     // Define a response message on success
     const response = { message: 'Patient successfully registerd', type: 'success' };

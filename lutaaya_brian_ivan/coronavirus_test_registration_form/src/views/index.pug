@@ -44,7 +44,7 @@ html(lang="en")
                         .form-row
                             .form-group.col
                                 .form-check.form-check-inline
-                                    input.form-check-input#male(type="radio", name="gender", value="male")
+                                    input.form-check-input#male(type="radio", name="gender", value="male", checked)
                                     label(for="male") Male
                                 .form-check.form-check-inline
                                     input.form-check-input#female(type="radio", name="gender", value="female")
@@ -61,5 +61,5 @@ html(lang="en")
                                 #catergory_error
                         .form-row
                             .form-group.col-md-6
-                                button.form-control(type="submit") Register
+                                button.form-control(type="submit" onClick="validate()") Register
     include components/foot
