@@ -13,7 +13,6 @@ router.post('/addpatient', async(req, res) => {
     try {
         let patient = new Patient(req.body);
         await patient.save()
-        console.log(req.body)
         console.log('patient saved to database');
         res.redirect('/allpatients')
     } catch (error) {
@@ -22,7 +21,14 @@ router.post('/addpatient', async(req, res) => {
 })
 
 //retrieve all patients
-
+router.get('/allpatients', async(req, res) => {
+    try {
+        let items = await Patient.find();
+        res.render('patientList', { patients: items })
+    } catch (error) {
+        res.status(400).send("unable to find items in database")
+    }
+})
 
 //retrieve single patient
 

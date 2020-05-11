@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 var patientSchema = new mongoose.Schema({
-    surName: String,
+    surname: String,
     givenName: String,
     dateofBirth: String,
     residence: String,

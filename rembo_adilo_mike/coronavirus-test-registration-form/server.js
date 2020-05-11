@@ -10,6 +10,7 @@ const userRoutes = require('./controllers/userRoutes')
 
 //setting static file access
 server.use(express.static(path.join(__dirname, 'public')));
+server.set('view engine', 'pug');
 
 //Parsing input to JSON
 server.use(bodyParser.json());
